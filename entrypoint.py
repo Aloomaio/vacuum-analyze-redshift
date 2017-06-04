@@ -18,7 +18,7 @@ def parse_args():
     # each tuple contains (the argument in bash syntax,
     #                      the name of the env variable, 
     #                      mandatory(T/F))
-    
+
     db_arguments = [('--db', 'DB_NAME', True),
                     ('--db-user', 'DB_USER', True),
                     ('--db-pwd', 'DB_PWD', True),
@@ -120,5 +120,5 @@ def send_email():
 if __name__ == '__main__':
     argv = parse_args()
     analyze_vacuum_schema.main(argv)
-    if (os.environ['SEND_EMAIL'] == 'True'):
+    if (os.environ['SEND_EMAIL'].lower() == 'true'):
         send_email()
