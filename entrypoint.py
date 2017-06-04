@@ -14,7 +14,11 @@ def parse_args():
     Parsing the required arguments to establish a database connection.
     """
 
-    # hardcoded arguments to be parsed
+    # hardcoded list of arguments to be parsed.
+    # each tuple contains (the argument in bash syntax,
+    #                      the name of the env variable, 
+    #                      mandatory(T/F))
+    
     db_arguments = [('--db', 'DB_NAME', True),
                     ('--db-user', 'DB_USER', True),
                     ('--db-pwd', 'DB_PWD', True),
@@ -34,7 +38,10 @@ def parse_args():
                     ('--stats-off-pct', 'STATS_OFF_PCT', False),
                     ('--max-table-size-mb', 'MAX_TABLE_SIZE_MB', False)]
 
-    # place holder for argv[0] - to be trimmed by the aws script
+    # argv is a list of arguments to be passed to Amazon Analyze/Vacuum script.
+    # That script is ignoring the fist argument, which is normally the script name.
+    # Here I decided to put a (None) as a place holder, since it will be
+    # ignored anyway.
     argv = [(None)]
 
     # build arguments list to send to aws script
@@ -64,7 +71,6 @@ def send_email():
                        'EMAIL_PWD',
                        'EMAIL_RECIPIENT']
 
-
     for arg in email_arguments:
         if arg not in os.environ:
             print('Missing %s - mandatory argument for e-mail report.' % (arg))
@@ -76,13 +82,15 @@ def send_email():
         s = smtplib.SMTP(host=os.environ['EMAIL_HOST'],
                          port=os.environ['EMAIL_PORT'])
     except smtplib.SMTPConnectError as e:
-        print("Connection failed: wrong credentials for SMTP {0}:{1}".format(os.environ['EMAIL_HOST'], os.environ['EMAIL_PORT']))
+        print("Connection failed: wrong credentials for SMTP {0}:{1}".format(
+            os.environ['EMAIL_HOST'], os.environ['EMAIL_PORT']))
         sys.exit(2)
     s.starttls()
     try:
         s.login(sender, os.environ['EMAIL_PWD'])
     except smtplib.SMTPAuthenticationError as e:
-        print("Connection failed: wrong username or password -> {0}@{1}".format(os.environ['EMAIL_SENDER'], os.environ['EMAIL_PWD']))
+        print("Connection failed: wrong username or password -> {0}@{1}".format(
+            os.environ['EMAIL_SENDER'], os.environ['EMAIL_PWD']))
         sys.exit(2)
     msg = MIMEMultipart()
     msg['From'] = sender
@@ -106,7 +114,7 @@ def send_email():
 
     s.sendmail(sender, recipient, msg.as_string())
     del msg
-    s.quit
+    s.quit()
 
 
 if __name__ == '__main__':
