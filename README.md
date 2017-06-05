@@ -2,6 +2,7 @@
 # Using
 
 You need to install [Docker](https://www.docker.com/get-docker) on your machine.
+
 Please refer to our [blog post][alooma-blog-post] for a detailed explanation.
 
 # Development
@@ -10,12 +11,13 @@ If you want to make changes to the script or fix bugs, we suggest forking [awsla
 
 # License
 
-The provided Dockerfile using a script developed by [`amazon-redshift-utils`][amazon-redshift-utils-license]. 
-The project is released under the [Apache 2.0 License][apache-2-license].
+*The provided Dockerfile using a script developed by [`amazon-redshift-utils`][amazon-redshift-utils-license]. 
+
+*Our project is released under the [Apache 2.0 License][apache-2-license].
 
 Please note that the upstream tools are released under other licenses:
 
- - ["`amazon-redshift-utils`"][amazon-redshift-utils-license] is released under the [Amazon Software License][asl].
+* Note that the upstream tool ["`amazon-redshift-utils`"][amazon-redshift-utils-license] is released under the [Amazon Software License][asl].
 
 
 
