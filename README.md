@@ -22,5 +22,5 @@ Please note that the upstream tools are released under other licenses:
 [amazon-redshift-utils-license]: https://github.com/awslabs/amazon-redshift-utils/blob/master/LICENSE.txt
 [apache-2-license]: https://choosealicense.com/licenses/apache-2.0/
 [asl]: http://aws.amazon.com/asl/
-[alooma-blog-post]: to be updated
+[alooma-blog-post]: https://www.alooma.com
 [1]: https://github.com/awslabs/amazon-redshift-utils.git
