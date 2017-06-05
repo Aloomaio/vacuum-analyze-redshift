@@ -11,11 +11,10 @@ If you want to make changes to the script or fix bugs, we suggest forking [awsla
 
 # License
 
-*The provided Dockerfile using a script developed by [`amazon-redshift-utils`][amazon-redshift-utils-license]. 
+* The provided Dockerfile using a script developed by [`amazon-redshift-utils`][amazon-redshift-utils-license]. 
 
-*Our project is released under the [Apache 2.0 License][apache-2-license].
+* Our project is released under the [Apache 2.0 License][apache-2-license].
 
-Please note that the upstream tools are released under other licenses:
 
 * Note that the upstream tool ["`amazon-redshift-utils`"][amazon-redshift-utils-license] is released under the [Amazon Software License][asl].
 
