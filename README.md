@@ -1,5 +1,5 @@
 
-# Using
+# Usage
 
 You need to install [Docker](https://www.docker.com/get-docker) on your machine.
 
@@ -7,7 +7,9 @@ Please refer to our [blog post][alooma-blog-post] for a detailed explanation.
 
 # Development
 
-If you want to make changes to the script or fix bugs, we suggest forking [awslabs/amazon-redshift-utils][1] and send pull requests.
+The Vacuum and Analyze logic is built by [awslabs/amazon-redshift-utils][1]. If you find a bug or would like to suggest a feature, please create a pull request over there.
+
+The Docker wrapper and the entrypoint is built by us. If you would like to fix a bug or a suggest a feature, please create a pull request in this repository.
 
 # License
 
@@ -16,7 +18,7 @@ If you want to make changes to the script or fix bugs, we suggest forking [awsla
 * Our project is released under the [Apache 2.0 License][apache-2-license].
 
 
-* Note that the upstream tool ["`amazon-redshift-utils`"][amazon-redshift-utils-license] is released under the [Amazon Software License][asl].
+* Note that the upstream tool [`amazon-redshift-utils`][amazon-redshift-utils-license] is released under the [Amazon Software License][asl].
 
 
 
