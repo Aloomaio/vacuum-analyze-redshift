@@ -25,5 +25,5 @@ The Docker wrapper and the entrypoint is built by us. If you would like to fix a
 [amazon-redshift-utils-license]: https://github.com/awslabs/amazon-redshift-utils/blob/master/LICENSE.txt
 [apache-2-license]: https://choosealicense.com/licenses/apache-2.0/
 [asl]: http://aws.amazon.com/asl/
-[alooma-blog-post]: https://www.alooma.com
+[alooma-blog-post]: https://www.alooma.com/blog/vacuum-analyze
 [1]: https://github.com/awslabs/amazon-redshift-utils.git
